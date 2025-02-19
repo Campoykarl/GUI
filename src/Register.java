@@ -32,7 +32,6 @@ public class Register extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        cps = new javax.swing.JTextField();
         user = new javax.swing.JTextField();
         fname = new javax.swing.JTextField();
         lname = new javax.swing.JTextField();
@@ -43,29 +42,22 @@ public class Register extends javax.swing.JFrame {
         ct = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         address = new javax.swing.JTextField();
-        ps = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         cancel = new javax.swing.JButton();
+        cps = new javax.swing.JPasswordField();
+        ps = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(0, 153, 51));
+        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 51));
-        jPanel1.setForeground(new java.awt.Color(0, 102, 51));
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setForeground(new java.awt.Color(51, 51, 51));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        cps.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        cps.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cpsActionPerformed(evt);
-            }
-        });
-        jPanel1.add(cps, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 340, 380, 40));
 
         user.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         user.addActionListener(new java.awt.event.ActionListener() {
@@ -132,14 +124,6 @@ public class Register extends javax.swing.JFrame {
         });
         jPanel1.add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 380, 40));
 
-        ps.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        ps.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                psActionPerformed(evt);
-            }
-        });
-        jPanel1.add(ps, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 380, 40));
-
         jLabel8.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Address:");
@@ -157,7 +141,7 @@ public class Register extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 470, 140, 50));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 440, 140, 50));
 
         cancel.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
         cancel.setText("Cancel");
@@ -166,7 +150,18 @@ public class Register extends javax.swing.JFrame {
                 cancelActionPerformed(evt);
             }
         });
-        jPanel1.add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 470, 120, 50));
+        jPanel1.add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 440, 120, 50));
+
+        cps.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        cps.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cpsActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cps, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 340, 380, 40));
+
+        ps.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jPanel1.add(ps, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 380, 40));
 
         jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 670, 560));
 
@@ -191,10 +186,6 @@ public class Register extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cpsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cpsActionPerformed
-
     private void userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_userActionPerformed
@@ -214,10 +205,6 @@ public class Register extends javax.swing.JFrame {
     private void addressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addressActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_addressActionPerformed
-
-    private void psActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_psActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_psActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        dbConnect db = new dbConnect();
@@ -246,6 +233,10 @@ public class Register extends javax.swing.JFrame {
     private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cancelActionPerformed
+
+    private void cpsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cpsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -285,7 +276,7 @@ public class Register extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField address;
     private javax.swing.JButton cancel;
-    private javax.swing.JTextField cps;
+    private javax.swing.JPasswordField cps;
     private javax.swing.JTextField ct;
     private javax.swing.JTextField fname;
     private javax.swing.JButton jButton1;
@@ -300,7 +291,7 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField lname;
-    private javax.swing.JTextField ps;
+    private javax.swing.JPasswordField ps;
     private javax.swing.JTextField user;
     // End of variables declaration//GEN-END:variables
 }
